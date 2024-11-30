@@ -1,0 +1,33 @@
+<!-- kylefin.github.io/multiSearch -->
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>Google Search</title>
+</head>
+<body>
+  <input type="text" id="search-field" placeholder="Search for books" style="width: 300px;">
+  <button id="search-button">Search</button>
+
+  <script>
+    const searchButton = document.getElementById('search-button');
+    const searchField = document.getElementById('search-field');
+
+    const search = () => {
+        const searchTerm = searchField.value.trim();
+        window.open(`https://www.amazon.com/s?k=${searchTerm}`);
+        window.open(`https://www.audible.com/search?keywords=${searchTerm}`);
+        window.open(`https://play.google.com/store/search?q=${searchTerm}&c=books`);
+        window.open(`https://libbyapp.com/search/beehive/search/query-${searchTerm}/page-1`);
+        window.open(`https://www.hoopladigital.com/search?q=${searchTerm}&scope=everything&type=direct`);  
+    };
+
+    searchButton.addEventListener('click', search);
+
+    searchField.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        search();
+      }
+    });
+  </script>
+</body>
+</html>
