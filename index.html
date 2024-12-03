@@ -1,4 +1,4 @@
-<!-- kylefin.github.io/multiSearch -->
+<!-- https://kylefin.github.io/multiSearch/ -->
 </html><!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,8 @@
 <body>
   <input type="text" id="search-field" placeholder="Search for books" style="width: 300px;">
   <button id="search-button">Search</button>
+  <br>
+  <p>Source code: <a href="https://github.com/KyleFin/multiSearch/blob/main/index.html">github.com/KyleFin/multiSearch</a></p>
 
   <script>
     const searchButton = document.getElementById('search-button');
@@ -17,6 +19,7 @@
         window.open(`https://www.amazon.com/s?k=${searchTerm}`);
         window.open(`https://www.audible.com/search?keywords=${searchTerm}`);
         window.open(`https://play.google.com/store/search?q=${searchTerm}&c=books`);
+        window.open(`https://libro.fm/search?q=${searchTerm}`);
         window.open(`https://libbyapp.com/search/beehive/search/query-${searchTerm}/page-1`);
         window.open(`https://www.hoopladigital.com/search?q=${searchTerm}&scope=everything&type=direct`);  
     };
